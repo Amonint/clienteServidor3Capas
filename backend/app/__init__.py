@@ -13,8 +13,8 @@ from app.controllers.contrato_controller import contrato_bp
 from app.controllers.empleado_controller import empleado_bp
 from app.controllers.factura_controller import factura_bp
 
-# Cargar variables de entorno desde archivo .env
-load_dotenv()
+# Cargar variables de entorno desde archivo .env (sin sobrescribir las existentes)
+load_dotenv(override=False)
 
 def create_app():
     """Factory function para crear la aplicación Flask"""
